@@ -33,6 +33,32 @@ rules:
 - apiGroups:
   - apps
   resources:
+  - daemonset
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apps
+  resources:
+  - daemonset/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apps
+  resources:
+  - daemonset/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apps
+  resources:
   - daemonsets
   - deployments
   - replicasets
